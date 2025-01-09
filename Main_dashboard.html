@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Scrollable Dashboard</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .chart-container {
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Interactive Scrollable Dashboard</h1>
+  <div class="chart-container" id="chart1"></div>
+  <div class="chart-container" id="chart2"></div>
+  <div class="chart-container" id="chart3"></div>
+
+  <script>
+    // Load first dashboard
+    vegaEmbed('dashboard1.html', {
+      $schema: "https://cdn.jsdelivr.net/npm/vega-lite@5.20.1",
+      // Paste the Vega-Lite spec from dashboard1.html here
+    });
+
+    // Load second dashboard
+    vegaEmbed('dashboard2.html', {
+      $schema: "https://cdn.jsdelivr.net/npm/vega-lite@5.20.1",
+      // Paste the Vega-Lite spec from dashboard2.html here
+    });
+
+    // Load third dashboard
+    vegaEmbed('dashboard3.html', {
+      $schema: "https://cdn.jsdelivr.net/npm/vega-lite@5.20.1",
+      // Paste the Vega-Lite spec from dashboard3.html here
+    });
+  </script>
+</body>
+</html>
